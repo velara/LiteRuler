@@ -1,6 +1,6 @@
 {
   "title": "Lite Ruler",
-  "version": "v1.002",
+  "version": "v1.003",
   "description": "Lightweight Drag Ruler Alternative",
   "compatibility":{
     "minimum": "10",
@@ -16,7 +16,7 @@
   "esmodules": ["js/main.js", "js/shim.js"],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/velara/LiteRuler/main/module.json",
-  "download": "https://github.com/velara/LiteRuler/archive/refs/tags/v1.002.zip",
+  "download": "https://github.com/velara/LiteRuler/archive/refs/tags/v1.003.zip",
   "url": "https://github.com/velara/LiteRuler",
   "id": "lite-ruler",
   "authors": [
