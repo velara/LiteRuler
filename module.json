@@ -1,0 +1,28 @@
+{
+  "title": "Lite Ruler",
+  "version": "0.0.1",
+  "description": "Lightweight Drag Ruler Alternative",
+  "compatibility":{
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "10"
+  },
+  "authors":
+  {
+    "name":"Avery",
+    "discord": "Avery#9136",
+    "url":"https://www.patreon.com/MercenaryMarketplace"
+  },
+  "esmodules": ["js/main.js", "js/shim.js"],
+  "socket": true,
+  "manifest": "https://raw.githubusercontent.com/League-of-Foundry-Developers/pf2edragruler/main/module.json",
+  "download": "https://github.com/League-of-Foundry-Developers/pf2edragruler/archive/refs/tags/v0.6.1.zip",
+  "url": "https://github.com/League-of-Foundry-Developers/pf2edragruler",
+  "id": "lite-ruler",
+  "authors": [
+    {
+      "name": "Velara [Avery#9136]",
+      "flags": {}
+    }
+  ]
+}
