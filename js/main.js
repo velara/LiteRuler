@@ -4,12 +4,11 @@ export const MODULE_ID = "lite-ruler";
 
 Hooks.once("init", () => {
 	//Wait until the game is initialized, then register the settings created previously.
-	registerSettings();
   registerKeybindings();
 });
 
 Hooks.once("libWrapper.Ready", async function() {
-  if(game.settings.get(MODULE_ID, "liteRulerEnabled")) registerRuler();
+  registerRuler();
 });
 
 function registerRuler() {
