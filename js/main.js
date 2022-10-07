@@ -1,4 +1,3 @@
-import {registerSettings} from "./settings.js"
 import {registerKeybindings} from "./keybindings.js"
 export const MODULE_ID = "lite-ruler";
 
