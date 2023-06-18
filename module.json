@@ -18,11 +18,11 @@
   "download": "https://github.com/velara/LiteRuler/archive/refs/tags/v2.0.0.zip",
   "url": "https://github.com/velara/LiteRuler",
   "id": "lite-ruler",
-  "requires": [
-			{
-				"id": "libWrapper",
-				"type": "module",
-				"manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.12.12.1/module.json"
-			}
-		]
+  "relationships": {
+  "requires": [{
+  				"id": "lib-wrapper",
+  				"type": "module",
+  				"manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.12.12.1/module.json"
+  			}]
+}
 }
