@@ -1,28 +1,28 @@
 {
   "title": "Lite Ruler",
-  "version": "v1.003",
+  "version": "v2.0.0",
   "description": "Lightweight Drag Ruler Alternative",
   "compatibility":{
     "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
+    "verified": "11",
+    "maximum": "11"
   },
-  "authors":
-  {
-    "name":"Avery",
-    "discord": "Avery#9136",
-    "url":"https://www.patreon.com/MercenaryMarketplace"
-  },
-  "esmodules": ["js/main.js", "js/shim.js"],
-  "socket": true,
-  "manifest": "https://raw.githubusercontent.com/velara/LiteRuler/main/module.json",
-  "download": "https://github.com/velara/LiteRuler/archive/refs/tags/v1.003.zip",
-  "url": "https://github.com/velara/LiteRuler",
-  "id": "lite-ruler",
   "authors": [
     {
-      "name": "Velara [Avery#9136]",
-      "flags": {}
+      "name": "Avery"
     }
-  ]
+  ],
+  "esmodules": ["js/main.js"],
+  "socket": true,
+  "manifest": "https://raw.githubusercontent.com/velara/LiteRuler/main/module.json",
+  "download": "https://github.com/velara/LiteRuler/archive/refs/tags/v2.0.0.zip",
+  "url": "https://github.com/velara/LiteRuler",
+  "id": "lite-ruler",
+  "requires": [
+			{
+				"id": "libWrapper",
+				"type": "module",
+				"manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.12.12.1/module.json"
+			}
+		]
 }
