@@ -1,12 +1,4 @@
 export function registerKeybindings() {
-	game.keybindings.register("lite-ruler", "cancelDrag", {
-		name: "lite-ruler.keybindings.cancelDrag",
-		onDown: cancelDrag,
-		editable: [{
-			key: "End",
-		}],
-		precedence: -1,
-	});
 
 	game.keybindings.register("lite-ruler", "createWaypoint", {
 		name: "lite-ruler.keybindings.createWaypoint",
@@ -35,36 +27,33 @@ export function registerKeybindings() {
 		precedence: -1,
 	});
 
+	game.keybindings.register("lite-ruler", "toggleLiteRuler", {
+		name: "lite-ruler.keybindings.toggleLiteRuler",
+		onDown: toggleLiteRuler,
+		editable: [{
+			key: "End"
+		}],
+		precedence: -1,
+	});
+
 }
 
-function cancelDrag() {
-	const ruler = canvas.controls.ruler;
-  const token = ruler.draggedToken
-  ruler._endMeasurement();
-
-    // Deactivate the drag workflow in mouse
-    token.mouseInteractionManager._deactivateDragEvents();
-    token.mouseInteractionManager.state = token.mouseInteractionManager.states.HOVER;
-
-    // This will cancel the current drag operation
-    // Pass in a fake event that hopefully is enough to allow other modules to function
-    token._onDragLeftCancel(event);
-  }
-
-
 function deleteWaypoint() {
-	if ((ruler._state === 2) && canvas.controls.ruler.waypoints.length > 1) {
-		const mousePosition = canvas.app.renderer.plugins.interaction.mouse.getLocalPosition(canvas.tokens)
-		canvas.controls.ruler._removeWaypoint({x: mousePosition.x, y: mousePosition.y});
-      return canvas.mouseInteractionManager._dragRight = false;
-	}
-	else {
-		return canvas.controls.ruler._endMeasurement();
-	}
+	const ruler = canvas.controls.ruler;
+	if ( (ruler._state === 2) && (ruler.waypoints.length > 1) ) {
+		ruler._removeWaypoint()
+	  this._onDragLeftCancel();
+ }
+	else ruler._endMeasurement();
 	this._onDragLeftCancel();
 }
 
 function addWaypoint(){
   const snap = !event.shiftKey
   canvas.controls.ruler._addWaypoint(canvas.controls.ruler.destination, snap)
+}
+
+function toggleLiteRuler(){
+if(game.settings.get("lite-ruler", "liteRulerDisabled")){game.settings.set("lite-ruler", "liteRulerDisabled", false)}
+else {game.settings.set("lite-ruler", "liteRulerDisabled", true)}
 }
